@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIBLIO-TECH | Validación de lector</title>
+    <link rel="stylesheet" href="css/lector.css">
+    <script src="js/lector.js" defer></script>
+</head>
+
+<body>
+    <header class="encabezado">
+        <div>
+            <h1>📚 BIBLIO-TECH</h1>
+            <p>Sistema de Gestión de Biblioteca</p>
+        </div>
+
+        <a href="index.html" class="boton-volver">Cerrar sesión</a>
+    </header>
+
+    <main class="contenedor">
+        <section class="titulo-seccion">
+            <h2>Identificación y validación del lector</h2>
+            <p>
+                Ingrese el código universitario o DNI del lector antes de
+                registrar un préstamo.
+            </p>
+        </section>
+
+        <section class="tarjeta-busqueda">
+            <form id="formLector">
+                <label for="codigoLector">
+                    Código universitario o DNI del lector
+                </label>
+
+                <div class="grupo-busqueda">
+                    <input
+                        type="text"
+                        id="codigoLector"
+                        placeholder="Ejemplo: 20260001 o DNI12345678"
+                        required
+                    >
+
+                    <button type="submit">Validar lector</button>
+                </div>
+            </form>
+
+            <p id="mensajeValidacion" class="mensaje"></p>
+        </section>
+
+        <section id="resultadoLector" class="resultado oculto">
+            <div class="cabecera-resultado">
+                <h3>Datos del lector</h3>
+                <span id="estadoLector" class="estado"></span>
+            </div>
+
+            <div class="datos-lector">
+                <div>
+                    <span class="etiqueta">Nombre completo</span>
+                    <strong id="nombreLector"></strong>
+                </div>
+
+                <div>
+                    <span class="etiqueta">Código / DNI</span>
+                    <strong id="codigoResultado"></strong>
+                </div>
+
+                <div>
+                    <span class="etiqueta">Carrera o condición</span>
+                    <strong id="carreraLector"></strong>
+                </div>
+
+                <div>
+                    <span class="etiqueta">Préstamos activos</span>
+                    <strong id="prestamosLector"></strong>
+                </div>
+            </div>
+
+            <div id="alertaLector" class="alerta"></div>
+
+            <button id="btnContinuarPrestamo" class="boton-prestamo" disabled>
+                Continuar con el préstamo
+            </button>
+        </section>
+
+        <section class="ayuda">
+            <h3>Lectores disponibles para la prueba</h3>
+            <ul>
+                <li><strong>20260001</strong> — Ana Quispe Huamán</li>
+                <li><strong>20260002</strong> — Luis Condori Flores</li>
+                <li><strong>DNI12345678</strong> — Rosa Mamani Apaza</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
