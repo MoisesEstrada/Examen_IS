@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIBLIO-TECH | Iniciar sesión</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <main class="pagina-login">
+
+        <section class="ventana-sistema">
+
+            <div class="barra-navegador">
+                <div class="controles-navegador">
+                    <span>←</span>
+                    <span>→</span>
+                    <span>↻</span>
+                </div>
+
+                <div class="direccion">
+                    <span class="candado">⌕</span>
+                    <span>www.bibliotech.com.pe/login</span>
+                </div>
+            </div>
+
+            <section class="contenido-login">
+
+                <div class="tarjeta-login">
+
+                    <div class="logo-bibliotech">
+                        <div class="libro-icono">
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <h1>BIBLIO-TECH</h1>
+                    <p class="subtitulo">Sistema de Gestión Bibliotecaria</p>
+
+                    <form id="formLogin">
+
+                        <div class="grupo-formulario">
+                            <label for="usuario">Usuario o correo</label>
+                            <input
+                                type="text"
+                                id="usuario"
+                                name="usuario"
+                                placeholder="Ingrese su usuario o correo"
+                                autocomplete="username"
+                                required
+                            >
+                        </div>
+
+                        <div class="grupo-formulario">
+                            <label for="contrasena">Contraseña</label>
+
+                            <div class="contenedor-password">
+                                <input
+                                    type="password"
+                                    id="contrasena"
+                                    name="contrasena"
+                                    placeholder="Ingrese su contraseña"
+                                    autocomplete="current-password"
+                                    required
+                                >
+
+                                <button
+                                    type="button"
+                                    id="verPassword"
+                                    class="btn-ver-password"
+                                    title="Mostrar contraseña"
+                                >
+                                    👁
+                                </button>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-ingresar">
+                            INGRESAR AL SISTEMA
+                        </button>
+
+                    </form>
+
+                    <p id="mensajeLogin" class="mensaje-login"></p>
+
+                    <a href="#" class="enlace-recuperar">
+                        ¿Olvidaste tu contraseña?
+                    </a>
+
+                    <div class="credenciales-prueba">
+                        <p><strong>Credenciales de prueba:</strong></p>
+                        <p>Administrador: <strong>admin</strong> / <strong>admin123</strong></p>
+                        <p>Colaborador: <strong>colaborador</strong> / <strong>colab123</strong></p>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+    <script src="js/login.js"></script>
+</body>
+</html>

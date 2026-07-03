@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #e7e7e7;
+    color: #222;
+}
+
+.pagina-login {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 15px;
+}
+
+.ventana-sistema {
+    width: 100%;
+    max-width: 930px;
+    min-height: 570px;
+    background: #ffffff;
+    border: 3px solid #343434;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 8px 10px 0 rgba(0, 0, 0, 0.18);
+}
+
+/* Barra superior parecida a un navegador */
+.barra-navegador {
+    height: 45px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 8px 14px;
+    background: #d6d6d6;
+    border-bottom: 2px solid #343434;
+}
+
+.controles-navegador {
+    display: flex;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 19px;
+    color: #333;
+}
+
+.controles-navegador span {
+    cursor: default;
+}
+
+.direccion {
+    flex: 1;
+    height: 27px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 10px;
+    background: #ffffff;
+    border: 1.5px solid #555;
+    font-size: 13px;
+    color: #333;
+}
+
+.candado {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Área principal */
+.contenido-login {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.025) 1px, transparent 1px),
+        linear-gradient(rgba(0, 0, 0, 0.025) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.tarjeta-login {
+    width: 100%;
+    max-width: 390px;
+    padding: 30px 32px 25px;
+    background: #fdfdfd;
+    border: 2px solid #2c2c2c;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 5px 6px 0 rgba(0, 0, 0, 0.14);
+}
+
+/* Logo elaborado con CSS */
+.logo-bibliotech {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.libro-icono {
+    width: 55px;
+    height: 55px;
+    position: relative;
+    border: 3px solid #222;
+    display: flex;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.libro-icono::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: 50%;
+    width: 2px;
+    background: #222;
+    transform: translateX(-50%);
+}
+
+.libro-icono span {
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.libro-icono span:first-child::after,
+.libro-icono span:last-child::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    background: #222;
+    top: 25px;
+}
+
+.libro-icono span:first-child::after {
+    left: 1px;
+    transform: rotate(45deg);
+}
+
+.libro-icono span:last-child::after {
+    right: 1px;
+    transform: rotate(-45deg);
+}
+
+h1 {
+    font-size: 23px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    color: #1c1c1c;
+}
+
+.subtitulo {
+    margin-bottom: 25px;
+    color: #555;
+    font-size: 12px;
+}
+
+.grupo-formulario {
+    margin-bottom: 17px;
+    text-align: left;
+}
+
+.grupo-formulario label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #242424;
+}
+
+.grupo-formulario input {
+    width: 100%;
+    height: 39px;
+    padding: 0 12px;
+    border: 1.8px solid #3d3d3d;
+    border-radius: 2px;
+    outline: none;
+    font-size: 13px;
+    background: #fff;
+}
+
+.grupo-formulario input:focus {
+    border-color: #000;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.12);
+}
+
+.contenedor-password {
+    position: relative;
+}
+
+.contenedor-password input {
+    padding-right: 45px;
+}
+
+.btn-ver-password {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 42px;
+    height: 37px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-ingresar {
+    width: 100%;
+    min-height: 42px;
+    border: 2px solid #1d1d1d;
+    background: #4c4c4c;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 0.3px;
+    transition: 0.2s ease;
+}
+
+.btn-ingresar:hover {
+    background: #202020;
+    transform: translateY(-1px);
+}
+
+.btn-ingresar:active {
+    transform: translateY(1px);
+}
+
+.mensaje-login {
+    min-height: 19px;
+    margin-top: 13px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.mensaje-login.exito {
+    color: #16712d;
+}
+
+.mensaje-login.error {
+    color: #b61d1d;
+}
+
+.enlace-recuperar {
+    display: inline-block;
+    margin-top: 8px;
+    color: #222;
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+.enlace-recuperar:hover {
+    color: #000;
+    font-weight: bold;
+}
+
+.credenciales-prueba {
+    margin-top: 22px;
+    padding: 10px;
+    border: 1px dashed #777;
+    background: #f1f1f1;
+    text-align: left;
+    font-size: 11px;
+    color: #444;
+    line-height: 1.55;
+}
+
+@media (max-width: 550px) {
+    .ventana-sistema {
+        min-height: auto;
+    }
+
+    .tarjeta-login {
+        padding: 28px 20px 22px;
+    }
+
+    .barra-navegador {
+        gap: 8px;
+        padding: 8px;
+    }
+
+    .direccion {
+        font-size: 10px;
+    }
+
+    .controles-navegador {
+        gap: 6px;
+        font-size: 15px;
+    }
+}
